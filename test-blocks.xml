@@ -1,0 +1,64 @@
+<blocks app="Snap! 4.0, http://snap.berkeley.edu" version="1">
+	<block-definition s="play note %'note'" type="command" category="sound">
+		<header/>
+		<code/>
+		<inputs>
+			<input type="%txt"/>
+		</inputs>
+		<script>
+			<block s="doRun">
+				<block s="reportURL">
+					<block s="reportJoinWords">
+						<list>
+							<l>localhost:8001/fake/</l>
+							<block var="note"/>
+						</list>
+					</block>
+				</block>
+				<list/>
+			</block>
+		</script>
+	</block-definition>
+	<block-definition s="play %'note' %'octave'" type="command" category="sound">
+		<header/>
+		<code/>
+		<inputs>
+			<input type="%txt"/>
+			<input type="%n"/>
+		</inputs>
+		<script>
+			<block s="doRun">
+				<block s="reportURL">
+					<block s="reportJoinWords">
+						<list>
+							<l>localhost:8001/fake/:</l>
+							<block var="note"/>
+							<block var="octave"/>
+						</list>
+					</block>
+				</block>
+				<list/>
+			</block>
+		</script>
+	</block-definition>
+	<block-definition s="C" type="reporter" category="variables">
+		<header/>
+		<code/>
+		<inputs/>
+		<script>
+			<block s="doReport">
+				<l>C</l>
+			</block>
+		</script>
+	</block-definition>
+	<block-definition s="4" type="reporter" category="variables">
+		<header/>
+		<code/>
+		<inputs/>
+		<script>
+			<block s="doReport">
+				<l>4</l>
+			</block>
+		</script>
+	</block-definition>
+</blocks>
